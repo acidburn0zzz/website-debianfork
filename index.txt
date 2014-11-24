@@ -1,0 +1,351 @@
+Who are you?!
+
+We are Veteran Unix Admins and we are concerned about what is happening
+to Debian GNU/Linux to the point of considering a fork of the project.
+
+And why would you do that?
+
+Some of us are upstream developers, some professional sysadmins: we are
+all concerned peers interacting with Debian and derivatives on a daily
+basis.
+
+We don't want to be forced to use systemd in substitution to the
+traditional UNIX sysvinit init, because systemd betrays the UNIX
+philosophy.
+
+We contemplate adopting more recent alternatives to sysvinit, but not
+those undermining the basic design principles of "do one thing and do it
+well" with a complex collection of dozens of tightly coupled binaries
+and opaque logs.
+
+Are there better solutions than forking?
+
+Yes: vote Ian Jackson's proposal to preserve freedom of choice of init
+systems.
+
+Then make sure sysvinit stays the default for now, systemd can be
+optional.
+
+Debian leaders can go on evaluating more init systems, just not impose
+one that ignores the needs of most of its users.
+
+Why don't you do that yourselves?
+
+We are excluded from voting on the issue: only few of us have the time
+and patience to interact with Debian on a voluntary basis.
+
+Now we do what we can, hoping our concerns will be heard by those who
+can cast a vote about it.
+
+    [edit/clarification]
+    Since this seems to be one of the most prominent critiques, we'd like to clarify this point.
+    With lack of time and patience we refer to our possibility to be involved in a complex
+    bureaucratic system like the one governing Debian. While we respect this way of working,
+    we think that our time is better invested in new directions, also according to our expertise.
+
+Is really all this fuss necessary?
+
+To quote Ian Jackson:
+
+"This resolution is not only important within Debian, and not only for
+jessie (its next release). It is also important feedback for upstreams,
+and our peer distros and downstreams".
+
+Why is this happening in your opinion?
+
+The current leadership of the project is heavily influenced by GNOME
+developers and too much inclined to consider desktop needs as crucial to
+the project, despite the fact that the majority of Debian users are
+tech-savvy system administrators.
+
+Can you articulate your critique to systemd?
+
+To paraphrase Eric S. Raymond on the issue, we see systemd being very
+prone to mission creep and bloat and likely to turn into a nasty
+hairball over the longer term.
+
+We like controlling the startup of the system with shell scripts that
+are readable, because readability grants a certain level of power and
+consciousness for those among us who are literate, and we believe that
+centralizing control services, sockets, devices, mounts, etc., all
+within one daemon is a slap in the face of the UNIX philosophy.
+
+How long are your beards?
+
+This is not a beard contest, rest assured the furry ones among us are
+not sheeps.
+
+To sum it up?
+
+If systemd will be substituting sysvinit in Debian, we will fork the
+project and create a new distro. We hope this won't be necessary, but we
+are well prepared for it.
+
+We need to talk.
+
+Sure, write an email to VUA@debianfork.org.
+
+Are you guys alone in this?
+
+Not at all, there are more protests against the imposition of systemd on
+users.
+
+This article is a good introduction to the issue at hand: Systemd:
+Harbinger of the Linux apocalypse.
+
+There is the boycott systemd website providing several references.
+
+Then there is the "systemd fork" called uselessd with some good points
+and lots of lulz.
+
+The wikipedia page lists also some critiques in its systemd reception
+section.
+
+With our protest we intend to represent the discontent of Debian users,
+because that's who we are. We intend to keep using Debian on our
+servers, or a fork if necessary. Others might have other goals, but we
+all share a common problem: systemd being imposed on us.
+
+Thanks for doing this. How can I help?
+
+Cheers.
+
+You can help by talking to fellow Debian developers and convince them of
+how wrong is to betray a very big and relevant userbase by listening to
+desktop needs.
+
+Also it can be helpful to monitor and update the Wikipedia page about
+systemd.
+
+How are people reacting to your protest?
+
+Here below some of the messages we are receiving. If you write us please
+specify if you allow us to quote your nick, else we may quote you
+anonymously, or not quote you at all if you specify so.
+
+
+       I'm with you guys in the way that systemd is not the way forward. But I do
+       not think that sysvinit is the way forward either. Maybe another init
+       system? Like GNU DMD? I know its still pretty immature, but I think it's a
+       good init system. I don't think sysvinit is ever going to make a comeback.
+
+       And forking Debian? That's a very hard feat. Debian is the biggest Linux
+       distro to date with hundreds of developers and at least 10 times as much
+       users. And you'll have to change a lot of things from upstream. Even
+       Ubuntu decided to use systemd instead of having to change the base init to
+       upstart. Perhaps going to Slackware instead? That's what I use. Its very
+       UNIX like. If that's what you strive for.
+
+
+    Thank you so much for this. I've been using Debian since Hamm and this
+    systemd nonsense has me ready to jump ship.
+
+
+       I don't know who is behind that email, but sincerely, thank you for
+       doing this.  I'm an UNIX/Linux sysadmin for nearly 20 years, I am
+       nowadays dealing with a 5k servers which consists of nearny 90%
+       debian systems. I've been a long time opponent to systemd, first
+       because I read the code (thing that too few of that crap's zealots
+       do), and ultimately because I tried it. That thing is a desktop
+       toy, and even then, it has failed me on 50% of the cases. Its very
+       nature is an abomination to UNIX principles and me and my team,
+       colleagues, friends on the sysadmin field are *VERY* worried (to
+       say the least) on what's coming.  Please keep that movement going,
+       make it strong, and if you want a hand, count me in.
+
+      Again, thank you.
+
+
+    I've been using runit as my init system on debian wheezy/jessie for a
+    while now and it works pretty well. glad to see the effort though on
+    debianfork.org . cool.
+
+
+       Do you realize that there's already more than 150 Debian
+       derivative?  Instead of doing one more, you're better off helping
+       one of the already existing derivatives. Writing "fork" is the joke
+       part, since that would only be a derivative, unless every Debian
+       Developer follows you, which will *not* happen.
+
+       Also, instead of just writing words on the internet, wouldn't you
+       think that helping some of the systemd alternative be a lot more
+       productive?
+
+       FYI, I don't like systemd either. And I've been maintaining OpenRC
+       in Debian, and trying to push for it to work on as many arch as
+       possible.  Though I currently don't have the time for it (for
+       professional and personal reasons), and some others are a bit
+       taking over the work, but it's not going as fast as it should. Some
+       help would be awesome, and would help a way better than writing
+       funny text on the net.
+
+
+    I will support you guys with code if the fork goes ahead. But kindly
+    think of another name.
+
+
+       Why don't you guys help out with Debian LTS? No systemd there, and
+       they need help at the moment.
+
+
+    I'm in, at least in general.  "because readability grants a certain
+    level of power and consciousness for those among us who are literate"
+
+    I'd edit that to add that systemd is for software devs, but sysvinit
+    is for sysadmins.  Sysadmins can debug shell scripts, but not
+    necessarily debug and recompile systemd, which will of course be
+    necessary in the course of admin duties.  Excessive product tying and
+    complication for the sake of complication takes away the ability of
+    admins to administer, which is highly counter productive.  The
+    response from the systemd astroturfers is invariably along the lines
+    of software, especially our software, will never have bugs (LOL)
+
+    "Pure Debian by Veteran Unix Admins." any other name has to be better
+    than that.  At least try not to violate trademarks by putting in (tm).
+
+    You missed an excellent lack of freedom argument.  There will be only
+    one way to do it and it will be mandatory and all else will be
+    forbidden and only one guy gets to decide.  Intentional
+    incompatibility is a pretty screwed up way to go thru life.  It does
+    not help that most of the new features and abilities of systemd appear
+    totally useless.  If one mp3 player was useless and awful, that would
+    be OK, unless the inquisition extinguished all other mp3
+    players... that would suck.  Although this is whats being done with
+    systemd.
+
+    And the embrace extend extinguish issue.  If submarine software
+    patents sink apache (unlikely, but possible) then I don't really care
+    although the emergency conversion to nginx might be a PITA for a day. 
+    When the one and only init system to bind them all is subverted either
+    by submarine patent or security holes then the temporary work around
+    will be to install the xyz package to switch to ... well I guess it'll
+    be impossible and I'd have to switch to freebsd.
+
+    There is a cost - benefit ratio issue.  Most of what systemd is
+    capable of doing is unfortunately completely useless and irrelevant in
+    comparison to what is being lost WRT to ease of debugging and
+    reliability and security and freedom.  If the costs were low/zero, the
+    useless features it provides would likely still not be worth it, but
+    at least the ratio would make it less awful.  To some extent the whole
+    situation is a farce.  You've got software devs deciding what desktop
+    users that don't exist want, while ignoring actual current desktop
+    users, and they're re-applying that "successful" (LOL) development
+    model to screw over sysadmins, and we're not subject to being told
+    what we want by non-admins.  Its a very arrogant business model.
+
+
+       If/when you start publishing work for your fork
+
+       Can you see if it can be documented in a way those of us in the redhat
+       world could take advantage of it? We have the same problem and concerns,
+       well at least the could *nix admin in our shop. Myself included.
+
+       We are also considering looking at alternatives and we all have used
+       debian in the past and most use ubuntu for desktop (there is always that
+       one mandrake guy) so I will be keeping an eye on this project as well.
+
+
+    Whatever the outcome you have my support !
+
+    Using various Unices since System V on an ICL Clan 4, and as long-time
+    BSD, Slackware and Debian user, I just don’t want systemd imposed on
+    me, whatever the purpose. Whether it’s total crap, a good idea or a
+    mix of both, this has to be *optional* and surely not a default. I
+    want to keep my servers and embedded systems bloat-free with only
+    their intended software sets installed.  Why don’t *they* fork Debian
+    and do whatever they want ? I like Debian the way it is (was) like a
+    good grilled steak with nothing superfluous added, no fancy
+    sauce. Thank you for your efforts !
+
+
+       I've been on Linux for over 15 years, I'm also a contributor in
+       Fedora and author of NetworkManager-ssh (SSH plugin for Network
+       manager). I'm a sort of a cross between a sysadmin and developer,
+       currently doing both.
+
+       I'm predominantly a Fedora user (and contributor) and am thinking
+       recently about forsaking Fedora in favour of something without
+       systemd (was thinking PCBSD). I've been around Linux for a while
+       and understand the core philosophy behind it and how systemd just
+       betrays all of that. I actually had an argument with Mr. Pottering
+       on the Fedora-dev list about having /var/log/messages having a
+       binary format. When log files in linux will not be plain text -
+       it'll be the end in my opinion. needless to say Pottering didn't
+       agree with me and tried to shut me up.
+
+       Pottering somehow managed to push systemd quite far in Fedora and
+       at the moment I'm in absorption mode trying to digest WTF happened
+       to my Fedora with systemd. Horrow show.
+
+       If this fork goes forward, I promise to try and do my best to
+       contriube as much as possible. I'm good with packaging and shell, I
+       believe I will be able to help. I think you guys hit the nail on
+       the head with your web page and you have my full support.
+
+       Lets not let our voice be silenced
+
+
+       As a veteran (20+ years; Solaris, HP-UX, RHEL, Debian) sysadmin who
+       prefers Debian over everything for use on about 40 GUIless servers,
+       it's either this (a fork away from systemd) or I move away from
+       Debian altogether.
+
+
+    Many thanks for the effort here, while it's not a big thing to replace
+    systemd on jessie/sid installation with sysvinit, it's not easy to
+    create an installer image which installs the OS without systemd. I
+    made an image which you can find on
+    http://without-systemd.org/debian-jessie/ The big problem is tasksel,
+    tasksell will install all Packages with the priorities required,
+    important and standard. Unfortunately systemd has the priority
+    importand and will be installed again, if you select "standard system
+    utilities" in tasksel, to fix that, i would have to create my own
+    Debian repository :-(
+
+    I hope for a solution without a fork. But if you need help with
+    forking, please contact me.
+
+
+       I support your idea of forking Debian to exclude systemd and its
+       multitude of tentacles. Please follow through. Also, please make
+       available means by which us mere users (though I've got
+       kernel-hacking and systems-architecture ambitions myself) may
+       participate in an effective way.
+
+       As I see it, the simplest way to fork Debian as of october 2014
+       would entail taking a full-system snapshot (per package versions),
+       available from snapshot.d.o, from a time before systemd
+       dependencies were introduced, and then adding on top any updates
+       that didn't add such. This would re-use nearly all mainline Debian
+       effort and require only porting of e.g. eudev from other
+       systemd-less distributions. Of course GNOME would have to go;
+       fortunately there is MATE.
+
+
+    Thanks for doing this. I run four Debian servers in production, three
+    of which are connected to an IRC network. Gnome remains the default DE
+    on Debian for accessibility reasons, so it's obvious they have the
+    monopoly of votes in favor of systemd. Large companies like Red Hat
+    are also backing destroying the UNIX-philosophies.
+
+    Once I heard Debian would be making the switch to systemd, I've been
+    slowly migrating all Debian servers over to OpenBSD over the impending
+    death of Debian. There's still much that leaves me missing Debian,
+    most importantly the large amount of different packages that are not
+    available in OpenBSD and would take lots of effort to port over.
+
+
+       I have been worried about systemd colonizing all the linux distros
+       for a long time and it's really happening. I want users to retain
+       freedom to use the init system they choose rather than being locked
+       in.
+
+       The debian mailing list vote about whether to switch to systemd was
+       atrocious, in no way did it come to a consensus but they still
+       forced this upon us? This was the reason I quit using debian. If
+       you look around there are very few remaining distros that aren't
+       getting taken over by systemd!
+
+       Your project is a good idea and I wish you the best.
+
+

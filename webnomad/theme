@@ -1,0 +1,76 @@
+#!/usr/bin/env zsh
+#
+# WebNomad, your slick and static website publisher
+#
+# Copyright (C) 2012-2013 Denis Roio <jaromil@dyne.org>
+#
+# This source  code is free  software; you can redistribute  it and/or
+# modify it under the terms of  the GNU Public License as published by
+# the Free  Software Foundation; either  version 3 of the  License, or
+# (at your option) any later version.
+#
+# This source code is distributed in  the hope that it will be useful,
+# but  WITHOUT ANY  WARRANTY;  without even  the  implied warranty  of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# Please refer to the GNU Public License for more details.
+#
+# You should have received a copy of the GNU Public License along with
+# this source code; if not, write to:
+# Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+
+typeset DIR CMD
+
+DIR="`dirname $0`"
+CMD="`basename $0`"
+{ test -r $DIR } || {
+    echo "error: launch webnomad commands from your project directory"
+    echo "i.e: ./$DIR/$CMD"
+    return 1
+}
+
+QUIET=0
+DEBUG=0
+
+source ${DIR}/utils
+
+{ test -r config.zsh } || {
+    error "Directory not configured for WebNomad. First use ./webnomad/init"
+    exit 1 }
+
+
+####################################
+
+typeset -A themedesc
+
+themedesc[amelia]="colorful, blue background, red menu"
+themedesc[cerulean]="light, white background, blue menu"
+themedesc[readable]="light, white background, serif"
+themedesc[journal]="light, white background, uppercase sans"
+themedesc[cyborg]="dark, almost black, background"
+themedesc[slate]="dark gray background"
+themedesc[superhero]="dark blue background"
+themedesc[simplex]="light, white background, sans, red links"
+themedesc[spacelab]="light, white background, sans, gray widget menus"
+themedesc[spruce]="dark, gray background, serif"
+themedesc[united]="light, white background, sans, orange block menus"
+
+
+
+{ test -z $1 } && {
+  notice "List of available themes:"
+  for i in `ls ${DIR}/themes`; do
+      act "$i : ${themedesc[$i]}"
+  done
+  exit 0
+}
+
+{ test -r ${DIR}/themes/$1 } || {
+    error "Theme not found: $1"
+    exit 1
+}
+
+notice "Installing theme: $1"
+cp -v ${DIR}/themes/$1/bootstrap.min.css views/css/bootstrap.min.css
+cp -v ${DIR}/themes/$1/bootstrap.min.css test/css/bootstrap.min.css
+
+exit 0

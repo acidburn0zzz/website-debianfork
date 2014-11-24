@@ -1,0 +1,111 @@
+#!/usr/bin/env zsh
+
+STYLING=0
+
+# make it work to browse results on file://
+baseurl="file://`pwd`/test/"
+
+# includejs+=(jquery.min.js jquery.sidr.js)
+
+# includecss+=(jquery.sidr.dark.css)
+
+{ test "$STYLING" = "1" } || { render_test_footer() { return 0 }; return 0 }
+    
+# Font size selector
+
+font-size_select() {
+    cat <<EOF
+ <select id="$1" name="$1-font-size">
+EOF
+    c=.5
+    while [[ $c -le 8 ]]; do
+	cat <<EOF
+<option value="${c%.}">${c%.} em</option>
+EOF
+	c=$(( $c + .5 ))
+    done
+    cat <<EOF
+</select>
+EOF
+}
+    
+    
+# font family selector
+
+font-family_select() {
+	cat <<EOF
+<select id="$1" name="$1-font-family">
+EOF
+    for f in $fonts; do
+	cat <<EOF
+<option value="$f">$f</option>
+EOF
+    done
+    print "</select>"
+}
+
+
+render_test_footer() {
+    cat <<EOF
+<div id="sidr">
+  <h3>Design test</h3>
+EOF
+
+    print  "<h4>H1 font size</h3>"
+    font-size_select h1size
+    
+    print  "<h4>H2 font size</h3>"
+    font-size_select h2size
+
+    cat <<EOF
+  <h3>Brand font family</h3>
+EOF
+    font-family_select brand-font-family
+    
+cat <<EOF
+  <h3>Header font family</h3>
+EOF
+font-family_select header-font-family
+
+cat <<EOF
+  <h3>Body font family</h3>
+EOF
+font-family_select body-font-family
+
+cat <<EOF
+  <h3>Navigation Font family</h3>
+EOF
+font-family_select nav-font-family
+
+
+cat <<EOF
+
+</div>
+
+<script>
+\$(document).ready(function() {
+  \$('#menu').sidr({
+     name: 'sidr',
+     side: 'right',
+     displace: false
+  });
+  \$.sidr('open');
+});
+\$('#h1size').change(function() { \$('h1').css('font-size', \$('#h1size').val() + "em" ); })
+\$('#h2size').change(function() { \$('h2').css('font-size', \$('#h2size').val() + "em" ); })
+
+\$('#brand-font-family').change(function(){ \$('.navbar .brand').css('font-family', \$('#brand-font-family').val() ); })
+
+\$('#header-font-family').change(function(){ \$('h1').css('font-family', \$('#header-font-family').val() ); })
+\$('#header-font-family').change(function(){ \$('h2').css('font-family', \$('#header-font-family').val() ); })
+
+\$('#body-font-family').change(function(){ \$('body').css('font-family', \$('#body-font-family').val() ); })
+
+\$('#nav-font-family').change(function(){ \$('nav div div ul li a').css('font-family', \$('#nav-font-family').val() ); })
+
+
+</script>
+
+EOF
+
+}
